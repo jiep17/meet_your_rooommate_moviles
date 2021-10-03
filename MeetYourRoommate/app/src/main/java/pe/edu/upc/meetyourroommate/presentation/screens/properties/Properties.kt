@@ -23,7 +23,7 @@ import androidx.compose.ui.unit.sp
 import pe.edu.upc.meetyourroommate.R
 import pe.edu.upc.meetyourroommate.data.model.Property
 import pe.edu.upc.meetyourroommate.data.remote.ApiClient
-import pe.edu.upc.meetyourroommate.data.remote.PropertyResponse
+import pe.edu.upc.meetyourroommate.data.remote.responses.PropertyResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -81,13 +81,13 @@ fun PropertyList(properties: List<Property>, navigatePropertyScreen: (Int)-> Uni
             )
         }
         items(properties) {
-            property -> PropertyRow(property, navigatePropertyScreen)
+            property -> ItemPropertyRow(property, navigatePropertyScreen)
         }
     }
 }
 
 @Composable
-fun PropertyRow(property: Property, navigatePropertyScreen: (Int)-> Unit){
+fun ItemPropertyRow(property: Property, navigatePropertyScreen: (Int)-> Unit){
     Card (
         modifier = Modifier
             .padding(horizontal = 8.dp, vertical = 8.dp)

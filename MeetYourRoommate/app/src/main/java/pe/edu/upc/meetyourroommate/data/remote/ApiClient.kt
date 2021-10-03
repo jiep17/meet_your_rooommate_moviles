@@ -1,5 +1,8 @@
 package pe.edu.upc.meetyourroommate.data.remote
 
+import pe.edu.upc.meetyourroommate.data.remote.services.LessorService
+import pe.edu.upc.meetyourroommate.data.remote.services.PropertyService
+import pe.edu.upc.meetyourroommate.data.remote.services.StudentService
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

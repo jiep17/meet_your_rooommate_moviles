@@ -93,7 +93,7 @@ fun PropertyRow(
                 modifier = Modifier
                     .fillMaxSize()
             ) {
-                PropertyHeader(property = property, containerHeigh = 800.dp)
+                PropertyHeader(property = property)
                 PropertyContent(property = property)
                 DescriptionLessor(lessor = lessor)
             }
@@ -103,12 +103,11 @@ fun PropertyRow(
 
 @Composable
 fun PropertyHeader(
-    property: Property,
-    containerHeigh : Dp
+    property: Property
 ) {
     Image(
         modifier = Modifier
-            .heightIn(max = containerHeigh / 2)
+            .heightIn(max = 400.dp)
             .fillMaxWidth(),
         painter = painterResource(id = R.drawable.i_department_default),
         contentDescription = "Imagen del Departamento",

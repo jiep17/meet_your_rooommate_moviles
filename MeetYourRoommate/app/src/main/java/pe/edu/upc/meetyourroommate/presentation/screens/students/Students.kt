@@ -2,7 +2,6 @@ package pe.edu.upc.meetyourroommate.presentation.screens.students
 
 import android.util.Log
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -27,7 +26,7 @@ import androidx.compose.ui.unit.sp
 import pe.edu.upc.meetyourroommate.R
 import pe.edu.upc.meetyourroommate.data.model.Student
 import pe.edu.upc.meetyourroommate.data.remote.ApiClient
-import pe.edu.upc.meetyourroommate.data.remote.StudentResponse
+import pe.edu.upc.meetyourroommate.data.remote.responses.StudentResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -85,13 +84,13 @@ fun StudentsList(students: List<Student>, navigateStudentScreen: (Int)-> Unit){
             )
         }
         items(students) {
-                student -> StudentRow(student, navigateStudentScreen)
+                student -> ItemStudentRow(student, navigateStudentScreen)
         }
     }
 }
 
 @Composable
-fun StudentRow(student: Student, navigateStudentScreen: (Int)-> Unit){
+fun ItemStudentRow(student: Student, navigateStudentScreen: (Int)-> Unit){
     Card (
         modifier = Modifier
             .padding(horizontal = 8.dp, vertical = 8.dp)
