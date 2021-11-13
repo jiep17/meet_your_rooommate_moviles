@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">Meet Your Roommate</string>
-    <string name="property_description">Description</string>
-    <string name="property_address">Address</string>
-    <string name="property_price">Price</string>
-    <string name="sign_in">Sign in</string>
-    <string name="email">Email</string>
-    <string name="password">Password</string>
-</resources>
