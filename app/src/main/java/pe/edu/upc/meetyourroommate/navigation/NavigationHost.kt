@@ -57,7 +57,10 @@ fun NavigationHost(
         }
 
         composable(Destinations.LessorRegister.route){
-            LessorRegister()
+            LessorRegister(
+                navigateHome = {
+                    navController.navigate(Destinations.Home.route)
+                })
         }
 
 
