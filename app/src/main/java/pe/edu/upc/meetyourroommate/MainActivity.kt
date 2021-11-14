@@ -12,12 +12,14 @@ import pe.edu.upc.meetyourroommate.navigation.Destinations
 import pe.edu.upc.meetyourroommate.presentation.components.Drawer
 import pe.edu.upc.meetyourroommate.presentation.components.TopBar
 import pe.edu.upc.meetyourroommate.presentation.screens.login.SignIn
+import pe.edu.upc.meetyourroommate.presentation.screens.register.Register
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             MainScreen()
+//            RegisterScreen()
         }
     }
 }
@@ -43,6 +45,15 @@ fun MainScreen() {
         drawerGesturesEnabled = true,
     ){
         NavigationHost(navController)
+    }
+}
+
+@Composable
+fun RegisterScreen(){
+    val navController = rememberNavController()
+    Scaffold {
+        NavigationHost(navController)
+        Register({ navController.navigate(Destinations.StudentRegister.route) },{ navController.navigate(Destinations.LessorRegister.route) })
     }
 }
 

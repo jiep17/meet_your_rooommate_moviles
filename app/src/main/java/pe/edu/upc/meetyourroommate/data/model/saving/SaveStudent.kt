@@ -1,35 +1,23 @@
-package pe.edu.upc.meetyourroommate.data.model
+package pe.edu.upc.meetyourroommate.data.model.saving
 
-public open class Student (
-    val id: Int,
+import pe.edu.upc.meetyourroommate.data.model.Student
 
-    val personType: String,
-
+class SaveStudent(
     val firstName: String,
-
     val lastName: String,
-
     val dni: String,
-
     val phoneNumber: String,
-
     val gender: String,
-
     val birthdate: String,
-
     val address: String,
-
-    val premium: Boolean,
-
     val description: String,
-
     val hobbies: String,
-
     val smoker: Boolean,
-
     val searching: Boolean,
-
-) {
-    constructor() : this(1,"","","","","","","","", false, "","", false, false)
-
+    val premium: Boolean,
+    val mail: String,
+    val password: String,
+)
+{
+    constructor():this("","","","","","","","","",false,false,true,"","")
 }

@@ -11,6 +11,9 @@ import pe.edu.upc.meetyourroommate.presentation.screens.login.SignIn
 import pe.edu.upc.meetyourroommate.presentation.screens.profile.Profile
 import pe.edu.upc.meetyourroommate.presentation.screens.properties.Properties
 import pe.edu.upc.meetyourroommate.presentation.screens.properties.PropertyScreen
+import pe.edu.upc.meetyourroommate.presentation.screens.register.LessorRegister
+import pe.edu.upc.meetyourroommate.presentation.screens.register.Register
+import pe.edu.upc.meetyourroommate.presentation.screens.register.StudentRegister
 import pe.edu.upc.meetyourroommate.presentation.screens.students.StudentScreen
 import pe.edu.upc.meetyourroommate.presentation.screens.students.Students
 
@@ -18,7 +21,7 @@ import pe.edu.upc.meetyourroommate.presentation.screens.students.Students
 fun NavigationHost(
     navController: NavHostController
 ) {
-    NavHost(navController = navController, startDestination = Destinations.Login.route){
+    NavHost(navController = navController, startDestination = Destinations.Register.route){
 
         // HOME
         composable(Destinations.Home.route) {
@@ -33,6 +36,30 @@ fun NavigationHost(
                 }
             )
         }
+
+        // Register
+        composable(Destinations.Register.route){
+            Register(
+                navigateToStudentRegister = {
+                    navController.navigate(Destinations.StudentRegister.route)
+                },
+                navigateToLessorRegister = {
+                    navController.navigate(Destinations.LessorRegister.route)
+                }
+            )
+        }
+
+        composable(Destinations.StudentRegister.route){
+            StudentRegister(
+                navigateHome = {
+                navController.navigate(Destinations.Home.route)
+            })
+        }
+
+        composable(Destinations.LessorRegister.route){
+            LessorRegister()
+        }
+
 
         // VISTA PROPERTIES
         composable(Destinations.Properties.route) {

@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiClient {
 
-    private const val API_BASE_URL = "https://myr-v1.herokuapp.com/api/"
+    private const val API_BASE_URL = "https://meetyourroommateapi.herokuapp.com/api/"
 
     private var propertyService: PropertyService? = null
 

@@ -1,10 +1,7 @@
 package pe.edu.upc.meetyourroommate.navigation
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AccountCircle
-import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.List
-import androidx.compose.material.icons.filled.Login
+import androidx.compose.material.icons.filled.*
 import androidx.compose.material.icons.rounded.List
 import androidx.compose.material.icons.rounded.Person
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -27,5 +24,7 @@ sealed class Destinations(
     }
     object Login: Destinations("login", "Login", Icons.Filled.Login)
     object Profile: Destinations("profile", "Profile", Icons.Filled.AccountCircle)
-
+    object Register: Destinations("register", "Register", Icons.Filled.AppRegistration)
+    object StudentRegister: Destinations("register/student", "Student Register", Icons.Filled.Person)
+    object LessorRegister: Destinations("register/lessor", "Lessor Register", Icons.Filled.Person)
 }
