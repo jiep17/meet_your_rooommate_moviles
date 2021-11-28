@@ -7,6 +7,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import pe.edu.upc.meetyourroommate.data.model.User
 import pe.edu.upc.meetyourroommate.navigation.Destinations
+import pe.edu.upc.meetyourroommate.presentation.screens.friends.FriendRequest
 import pe.edu.upc.meetyourroommate.presentation.screens.home.Home
 import pe.edu.upc.meetyourroommate.presentation.screens.login.SignIn
 import pe.edu.upc.meetyourroommate.presentation.screens.properties.CreatePropertyScreen
@@ -100,6 +101,11 @@ fun NavigationHost(
                 },
                 usuario = usuario
             )
+        }
+        
+        // Friend Request
+        composable (Destinations.FriendRequest.route) {
+            FriendRequest(usuario = usuario)
         }
 
         // VISTA STUDENTS

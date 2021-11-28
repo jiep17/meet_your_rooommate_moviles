@@ -7,23 +7,20 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavController
-import androidx.navigation.NavHostController
 import pe.edu.upc.meetyourroommate.R
 import pe.edu.upc.meetyourroommate.data.model.User
 import pe.edu.upc.meetyourroommate.data.remote.rest_api.RestApiUserService
 import pe.edu.upc.meetyourroommate.data.useful.EmailState
 import pe.edu.upc.meetyourroommate.data.useful.PasswordState
+import pe.edu.upc.meetyourroommate.presentation.components.AlertDialogBoxs
 
 @Composable
 fun SignIn(
@@ -61,6 +58,8 @@ fun SignInContent(
     ) {
         val focusRequester = remember { FocusRequester() }
         val emailState = remember { EmailState() }
+        var visibleBoxAlert by remember { mutableStateOf(false)}
+
         Email(emailState = emailState, onImeAction = {focusRequester.requestFocus()})
         
         Spacer(modifier = Modifier.height(16.dp))
@@ -82,7 +81,7 @@ fun SignInContent(
                         navigateHome()
                     }
                     else {
-                        Log.d("Error al logear", "error al logear ")
+                        visibleBoxAlert = !visibleBoxAlert
                     }
                 }
             },
@@ -105,6 +104,10 @@ fun SignInContent(
             shape = RoundedCornerShape(corner = CornerSize(16.dp)),
         ) {
             Text(text = "Register")
+        }
+
+        if(visibleBoxAlert){
+            AlertDialogBoxs()
         }
 
     }

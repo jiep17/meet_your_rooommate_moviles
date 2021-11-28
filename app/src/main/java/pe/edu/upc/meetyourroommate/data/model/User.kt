@@ -4,5 +4,5 @@ class User(
     var id: Int?,
     var discriminator: String
  ){
-    constructor() : this(1, "")
+    constructor() : this(null, "")
 }

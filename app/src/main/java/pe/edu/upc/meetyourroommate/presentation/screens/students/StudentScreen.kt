@@ -72,6 +72,7 @@ fun StudentRow(student: Student, usuario: User) {
         backgroundColor = colorResource(R.color.naranja_p),
         shape = RoundedCornerShape(corner = CornerSize(8.dp))
     ){
+        val openDialogFriendRequest = remember { mutableStateOf(false)}
         val friendRequestService =RestApiFriendRequestService()
         Column(
             modifier = Modifier
@@ -90,14 +91,7 @@ fun StudentRow(student: Student, usuario: User) {
                     StudentContent(student)
                     Button(
                         onClick = {
-                            friendRequestService.createFriendRequest(usuario.id!!, student.id) {
-                                if(it?.status == 3) {
-                                    Log.d("FriendRequest", "Solicitud enviada")
-                                }
-                                else{
-                                    Log.d("FriendRequest error", "No se pudo enviar la solicitud")
-                                }
-                            }
+                            openDialogFriendRequest.value = true
                         },
                         shape = RoundedCornerShape(corner = CornerSize(24.dp)),
                         colors = ButtonDefaults.buttonColors(backgroundColor = colorResource(R.color.naranja_p)),
@@ -105,6 +99,44 @@ fun StudentRow(student: Student, usuario: User) {
                             .padding(end = 10.dp)
                     ) {
                         Text(text = "Agregar")
+                    }
+
+                    if(openDialogFriendRequest.value) {
+                        AlertDialog(
+                            onDismissRequest = {
+                                openDialogFriendRequest.value = false
+                            },
+//                            title = {
+//                                Text(text = "Solicitud de Amistad")
+//                            },
+                            text = {
+                                Text("¿Deseas enviar una solicitud de amistad a " + student.firstName + "?")
+                            },
+                            confirmButton = {
+                                Button(
+                                    onClick = {
+                                        friendRequestService.createFriendRequest(usuario.id!!, student.id) {
+                                            if(it?.status == 3) {
+                                                Log.d("FriendRequest", "Solicitud enviada")
+                                            }
+                                            else{
+                                                Log.d("FriendRequest error", "No se pudo enviar la solicitud")
+                                            }
+                                        }
+                                        openDialogFriendRequest.value = false
+                                    }) {
+                                    Text("Confirmar")
+                                }
+                            },
+                            dismissButton = {
+                                Button(
+                                    onClick = {
+                                        openDialogFriendRequest.value = false
+                                    }) {
+                                    Text("Cancelar")
+                                }
+                            }
+                        )
                     }
                 }
             }

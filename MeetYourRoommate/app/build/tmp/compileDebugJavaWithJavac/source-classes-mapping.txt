@@ -1,0 +1,2 @@
+pe/edu/upc/meetyourroommate/BuildConfig.java
+ pe.edu.upc.meetyourroommate.BuildConfig

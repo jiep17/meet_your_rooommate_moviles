@@ -1,0 +1,109 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="pe.edu.upc.meetyourroommate"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->E:\escritorio\GIT-MOVILES\meet_your_rooommate_moviles\MeetYourRoommate\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="31" />
+9-->E:\escritorio\GIT-MOVILES\meet_your_rooommate_moviles\MeetYourRoommate\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->E:\escritorio\GIT-MOVILES\meet_your_rooommate_moviles\MeetYourRoommate\app\src\main\AndroidManifest.xml:5:5-66
+11-->E:\escritorio\GIT-MOVILES\meet_your_rooommate_moviles\MeetYourRoommate\app\src\main\AndroidManifest.xml:5:22-64
+12
+13    <application
+13-->E:\escritorio\GIT-MOVILES\meet_your_rooommate_moviles\MeetYourRoommate\app\src\main\AndroidManifest.xml:6:5-24:19
+14        android:allowBackup="true"
+14-->E:\escritorio\GIT-MOVILES\meet_your_rooommate_moviles\MeetYourRoommate\app\src\main\AndroidManifest.xml:7:9-35
+15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+15-->[androidx.core:core:1.6.0] C:\Users\Jeremias\.gradle\caches\transforms-3\cec9fe7b6132d7b782fe169c802731ab\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
+16        android:debuggable="true"
+17        android:icon="@mipmap/ic_launcher"
+17-->E:\escritorio\GIT-MOVILES\meet_your_rooommate_moviles\MeetYourRoommate\app\src\main\AndroidManifest.xml:8:9-43
+18        android:label="@string/app_name"
+18-->E:\escritorio\GIT-MOVILES\meet_your_rooommate_moviles\MeetYourRoommate\app\src\main\AndroidManifest.xml:9:9-41
+19        android:roundIcon="@mipmap/ic_launcher_round"
+19-->E:\escritorio\GIT-MOVILES\meet_your_rooommate_moviles\MeetYourRoommate\app\src\main\AndroidManifest.xml:10:9-54
+20        android:supportsRtl="true"
+20-->E:\escritorio\GIT-MOVILES\meet_your_rooommate_moviles\MeetYourRoommate\app\src\main\AndroidManifest.xml:11:9-35
+21        android:testOnly="true"
+22        android:theme="@style/Theme.MeetYourRoommate" >
+22-->E:\escritorio\GIT-MOVILES\meet_your_rooommate_moviles\MeetYourRoommate\app\src\main\AndroidManifest.xml:12:9-54
+23        <activity
+23-->E:\escritorio\GIT-MOVILES\meet_your_rooommate_moviles\MeetYourRoommate\app\src\main\AndroidManifest.xml:13:9-23:20
+24            android:name="pe.edu.upc.meetyourroommate.MainActivity"
+24-->E:\escritorio\GIT-MOVILES\meet_your_rooommate_moviles\MeetYourRoommate\app\src\main\AndroidManifest.xml:14:13-41
+25            android:exported="true"
+25-->E:\escritorio\GIT-MOVILES\meet_your_rooommate_moviles\MeetYourRoommate\app\src\main\AndroidManifest.xml:15:13-36
+26            android:label="@string/app_name"
+26-->E:\escritorio\GIT-MOVILES\meet_your_rooommate_moviles\MeetYourRoommate\app\src\main\AndroidManifest.xml:16:13-45
+27            android:theme="@style/Theme.MeetYourRoommate.NoActionBar" >
+27-->E:\escritorio\GIT-MOVILES\meet_your_rooommate_moviles\MeetYourRoommate\app\src\main\AndroidManifest.xml:17:13-70
+28            <intent-filter>
+28-->E:\escritorio\GIT-MOVILES\meet_your_rooommate_moviles\MeetYourRoommate\app\src\main\AndroidManifest.xml:18:13-22:29
+29                <action android:name="android.intent.action.MAIN" />
+29-->E:\escritorio\GIT-MOVILES\meet_your_rooommate_moviles\MeetYourRoommate\app\src\main\AndroidManifest.xml:19:17-69
+29-->E:\escritorio\GIT-MOVILES\meet_your_rooommate_moviles\MeetYourRoommate\app\src\main\AndroidManifest.xml:19:25-66
+30
+31                <category android:name="android.intent.category.LAUNCHER" />
+31-->E:\escritorio\GIT-MOVILES\meet_your_rooommate_moviles\MeetYourRoommate\app\src\main\AndroidManifest.xml:21:17-77
+31-->E:\escritorio\GIT-MOVILES\meet_your_rooommate_moviles\MeetYourRoommate\app\src\main\AndroidManifest.xml:21:27-74
+32            </intent-filter>
+33        </activity>
+34        <activity
+34-->[androidx.compose.ui:ui-tooling:1.0.2] C:\Users\Jeremias\.gradle\caches\transforms-3\ae265f2961c1c697fa483cf9b7e97cd8\transformed\jetified-ui-tooling-1.0.2\AndroidManifest.xml:25:9-27:39
+35            android:name="androidx.compose.ui.tooling.PreviewActivity"
+35-->[androidx.compose.ui:ui-tooling:1.0.2] C:\Users\Jeremias\.gradle\caches\transforms-3\ae265f2961c1c697fa483cf9b7e97cd8\transformed\jetified-ui-tooling-1.0.2\AndroidManifest.xml:26:13-71
+36            android:exported="true" />
+36-->[androidx.compose.ui:ui-tooling:1.0.2] C:\Users\Jeremias\.gradle\caches\transforms-3\ae265f2961c1c697fa483cf9b7e97cd8\transformed\jetified-ui-tooling-1.0.2\AndroidManifest.xml:27:13-36
+37
+38        <service
+38-->[androidx.room:room-runtime:2.3.0] C:\Users\Jeremias\.gradle\caches\transforms-3\dfcca3cfff5a081555adca79649330da\transformed\room-runtime-2.3.0\AndroidManifest.xml:25:9-28:40
+39            android:name="androidx.room.MultiInstanceInvalidationService"
+39-->[androidx.room:room-runtime:2.3.0] C:\Users\Jeremias\.gradle\caches\transforms-3\dfcca3cfff5a081555adca79649330da\transformed\room-runtime-2.3.0\AndroidManifest.xml:26:13-74
+40            android:directBootAware="true"
+40-->[androidx.room:room-runtime:2.3.0] C:\Users\Jeremias\.gradle\caches\transforms-3\dfcca3cfff5a081555adca79649330da\transformed\room-runtime-2.3.0\AndroidManifest.xml:27:13-43
+41            android:exported="false" />
+41-->[androidx.room:room-runtime:2.3.0] C:\Users\Jeremias\.gradle\caches\transforms-3\dfcca3cfff5a081555adca79649330da\transformed\room-runtime-2.3.0\AndroidManifest.xml:28:13-37
+42
+43        <provider
+43-->[androidx.profileinstaller:profileinstaller:1.0.2] C:\Users\Jeremias\.gradle\caches\transforms-3\4d34657adf3cf8540ffad9d9debba4de\transformed\jetified-profileinstaller-1.0.2\AndroidManifest.xml:26:9-34:20
+44            android:name="androidx.startup.InitializationProvider"
+44-->[androidx.profileinstaller:profileinstaller:1.0.2] C:\Users\Jeremias\.gradle\caches\transforms-3\4d34657adf3cf8540ffad9d9debba4de\transformed\jetified-profileinstaller-1.0.2\AndroidManifest.xml:27:13-67
+45            android:authorities="pe.edu.upc.meetyourroommate.androidx-startup"
+45-->[androidx.profileinstaller:profileinstaller:1.0.2] C:\Users\Jeremias\.gradle\caches\transforms-3\4d34657adf3cf8540ffad9d9debba4de\transformed\jetified-profileinstaller-1.0.2\AndroidManifest.xml:28:13-68
+46            android:exported="false" >
+46-->[androidx.profileinstaller:profileinstaller:1.0.2] C:\Users\Jeremias\.gradle\caches\transforms-3\4d34657adf3cf8540ffad9d9debba4de\transformed\jetified-profileinstaller-1.0.2\AndroidManifest.xml:29:13-37
+47            <meta-data
+47-->[androidx.profileinstaller:profileinstaller:1.0.2] C:\Users\Jeremias\.gradle\caches\transforms-3\4d34657adf3cf8540ffad9d9debba4de\transformed\jetified-profileinstaller-1.0.2\AndroidManifest.xml:31:13-33:52
+48                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+48-->[androidx.profileinstaller:profileinstaller:1.0.2] C:\Users\Jeremias\.gradle\caches\transforms-3\4d34657adf3cf8540ffad9d9debba4de\transformed\jetified-profileinstaller-1.0.2\AndroidManifest.xml:32:17-85
+49                android:value="androidx.startup" />
+49-->[androidx.profileinstaller:profileinstaller:1.0.2] C:\Users\Jeremias\.gradle\caches\transforms-3\4d34657adf3cf8540ffad9d9debba4de\transformed\jetified-profileinstaller-1.0.2\AndroidManifest.xml:33:17-49
+50        </provider>
+51
+52        <receiver
+52-->[androidx.profileinstaller:profileinstaller:1.0.2] C:\Users\Jeremias\.gradle\caches\transforms-3\4d34657adf3cf8540ffad9d9debba4de\transformed\jetified-profileinstaller-1.0.2\AndroidManifest.xml:36:9-45:20
+53            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+53-->[androidx.profileinstaller:profileinstaller:1.0.2] C:\Users\Jeremias\.gradle\caches\transforms-3\4d34657adf3cf8540ffad9d9debba4de\transformed\jetified-profileinstaller-1.0.2\AndroidManifest.xml:37:13-76
+54            android:directBootAware="false"
+54-->[androidx.profileinstaller:profileinstaller:1.0.2] C:\Users\Jeremias\.gradle\caches\transforms-3\4d34657adf3cf8540ffad9d9debba4de\transformed\jetified-profileinstaller-1.0.2\AndroidManifest.xml:38:13-44
+55            android:enabled="true"
+55-->[androidx.profileinstaller:profileinstaller:1.0.2] C:\Users\Jeremias\.gradle\caches\transforms-3\4d34657adf3cf8540ffad9d9debba4de\transformed\jetified-profileinstaller-1.0.2\AndroidManifest.xml:39:13-35
+56            android:exported="true"
+56-->[androidx.profileinstaller:profileinstaller:1.0.2] C:\Users\Jeremias\.gradle\caches\transforms-3\4d34657adf3cf8540ffad9d9debba4de\transformed\jetified-profileinstaller-1.0.2\AndroidManifest.xml:40:13-36
+57            android:permission="android.permission.DUMP" >
+57-->[androidx.profileinstaller:profileinstaller:1.0.2] C:\Users\Jeremias\.gradle\caches\transforms-3\4d34657adf3cf8540ffad9d9debba4de\transformed\jetified-profileinstaller-1.0.2\AndroidManifest.xml:41:13-57
+58            <intent-filter>
+58-->[androidx.profileinstaller:profileinstaller:1.0.2] C:\Users\Jeremias\.gradle\caches\transforms-3\4d34657adf3cf8540ffad9d9debba4de\transformed\jetified-profileinstaller-1.0.2\AndroidManifest.xml:42:13-44:29
+59                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+59-->[androidx.profileinstaller:profileinstaller:1.0.2] C:\Users\Jeremias\.gradle\caches\transforms-3\4d34657adf3cf8540ffad9d9debba4de\transformed\jetified-profileinstaller-1.0.2\AndroidManifest.xml:43:17-91
+59-->[androidx.profileinstaller:profileinstaller:1.0.2] C:\Users\Jeremias\.gradle\caches\transforms-3\4d34657adf3cf8540ffad9d9debba4de\transformed\jetified-profileinstaller-1.0.2\AndroidManifest.xml:43:25-88
+60            </intent-filter>
+61        </receiver>
+62    </application>
+63
+64</manifest>

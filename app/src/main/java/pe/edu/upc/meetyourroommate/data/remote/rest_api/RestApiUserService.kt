@@ -21,9 +21,10 @@ class RestApiUserService {
                     val login_user = response.body()
                     onResult(login_user)
                 }
+
             }
             override fun onFailure(call: Call<User>, t: Throwable) {
-                Log.d("UserLoginError", t.toString())
+                onResult(User())
             }
         })
 

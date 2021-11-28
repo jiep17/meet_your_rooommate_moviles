@@ -35,7 +35,8 @@ fun MainScreen() {
         Destinations.Home,
         Destinations.Properties,
         Destinations.Students,
-        Destinations.AddProperty
+        Destinations.AddProperty,
+        Destinations.FriendRequest
     )
     Scaffold(
         scaffoldState = scaffoldState,
